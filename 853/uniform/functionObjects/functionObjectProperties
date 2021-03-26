@@ -1,0 +1,126 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "853/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+runTimeControl1
+{
+    condition1
+    {
+        Cd
+        {
+            totalTime       1504;
+        }
+        Cl
+        {
+            totalTime       1504;
+        }
+        iter            751;
+    }
+}
+
+runTimeControl2
+{
+    conditions1
+    {
+        startTime       1;
+    }
+    active          0;
+}
+
+results
+{
+    forceCoeffs
+    {
+        scalar
+        {
+            Cd              0.04429983350184571;
+            Cs              -1.135027344386856e-21;
+            Cl              0.5296697930903355;
+            CmRoll          0.2648348965451678;
+            CmPitch         -0.00264277604439591;
+            CmYaw           -0.02214991675092286;
+            Cd(f)           0.2869848132960907;
+            Cd(r)           -0.2426849797942449;
+            Cs(f)           -0.02214991675092286;
+            Cs(r)           0.02214991675092286;
+            Cl(f)           0.2621921205007718;
+            Cl(r)           0.2674776725895636;
+        }
+    }
+    residuals
+    {
+        scalar
+        {
+            Ux_initial      6.22272e-06;
+            Ux_final        2.02741e-08;
+            Uy_initial      9.996000000000001e-06;
+            Uy_final        9.39648e-08;
+            k_initial       8.61232e-06;
+            k_final         4.68135e-08;
+            p_initial       9.85963e-06;
+            p_final         9.65255e-08;
+            gammaInt_initial 4.17709e-06;
+            gammaInt_final  1.88446e-08;
+            omega_initial   8.87435e-08;
+            omega_final     1.70696e-09;
+            ReThetat_initial 4.95993e-06;
+            ReThetat_final  2.07003e-09;
+        }
+        label
+        {
+            Ux_iters        1;
+            Uy_iters        1;
+            k_iters         1;
+            p_iters         6;
+            gammaInt_iters  1;
+            omega_iters     1;
+            ReThetat_iters  1;
+        }
+    }
+    runTimeControl1
+    {
+        scalar
+        {
+            CdMean          0.04478711449157165;
+            ClMean          0.5311423541253336;
+        }
+    }
+}
+
+triggerIndex    1;
+
+symmetry
+{
+    k
+    {
+        file            "<case>/postProcessing/symmetry/853/symmetry.vtp";
+    }
+    nut
+    {
+        file            "<case>/postProcessing/symmetry/853/symmetry.vtp";
+    }
+    p
+    {
+        file            "<case>/postProcessing/symmetry/853/symmetry.vtp";
+    }
+    U
+    {
+        file            "<case>/postProcessing/symmetry/853/symmetry.vtp";
+    }
+}
+
+
+// ************************************************************************* //

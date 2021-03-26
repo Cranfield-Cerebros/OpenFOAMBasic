@@ -1,0 +1,5 @@
+# y+ ()       
+# Time        	patch         	min           	max           	average       
+853           	lowerAirfoil	7.450926e-02	5.345300e+00	1.060558e+00
+853           	trailingEdge	8.841744e-02	1.182974e+00	3.660221e-01
+853           	upperAirfoil	4.997583e-01	5.366015e+00	1.400094e+00
